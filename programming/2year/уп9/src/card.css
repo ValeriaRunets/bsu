@@ -1,0 +1,22 @@
+.image {
+    position	: relative;
+}
+
+h1 {
+    position	: absolute;
+    top		: 150px;
+    left		: 650px;
+    background: -webkit-linear-gradient(#faffff, #850024, #faffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.giphy-embed {
+    position: absolute;
+    top: 250px;
+    left: 610px;
+}
+.audio{
+    position: absolute;
+    top: 600px;
+    left: 610px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "form.css" >
+    <title>Form</title>
+</head>
+<body>
+<header>
+        <div class="menu"><img class="circle"><a href="form.html">Form</a></div>
+        <div class="menu"><img class="circle"><a href="table.html">Table</a></div>
+        <div class="menu"><img class="circle"><a href="map.html">Map</a></div>
+</header>
+<form class="form" >
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="surname">Surname</label>
+        <input type="text" id="surname">
+    </div>
+    <div>
+        <label>Your course</label>
+        <p><input name="radio" type="radio" checked value=1>1</p>
+        <p><input name="radio" type="radio" value=2>2</p>
+        <p><input name="radio" type="radio" value=3>3</p>
+        <p><input name="radio" type="radio" value=4>4</p>
+    </div>
+    <div>
+        <label for="select">Your group</label>
+        <select id="select">
+            <option id="0" value=1>1</option>
+            <option id="1" value=2>2</option>
+            <option id="2" value=3>3</option>
+            <option id="3" value=4>4</option>
+        </select>
+    </div>
+    <div>
+        <label >Which languages do you know?</label>
+            <input type="checkbox" class="checkbox" value=Russian>Russian</input>
+            <input type="checkbox" class="checkbox" value=English>English</input>
+            <input type="checkbox" class="checkbox" value=Chinese>Chinese</input>
+            <input type="checkbox" class="checkbox" value=Deutsch>Deutsch</input>
+    </div>
+    <div>
+        <label for="select">Your photo</label>
+        <input type="file" data-input="false" id="img" name="img" data-buttonText="Upload File" />
+    </div>
+    <button><img class="ok" src="ok.jpg"></button>
+    <button><img class="ok" src="cancel.jpg"> </button>
+    <script src="script.js"></script>
+</form>
+</body>
+</html>

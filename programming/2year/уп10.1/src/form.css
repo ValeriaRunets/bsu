@@ -1,0 +1,43 @@
+.circle{
+    background-image: url("red.png");
+    height: 20px;
+    width: 20px;
+}
+header{
+    display: flex;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form {
+    width: 400px;
+    margin: 60px auto 30px;
+    padding: 10px;
+    position: relative;
+    height: auto;
+
+    border-radius: 10px;
+    background: bisque;
+}
+label{
+    width: 100%;
+    color: darkgray;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu{
+    padding-right: 20px;
+}
+button{
+    margin-right: auto;
+    margin-left: auto;
+}
+.map{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+.ok{
+    width: 20px;
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            Human: name:Alex, country:Germany, age:25
+            Human: name:Steve, country:Portugal, age:30
+            Human: name:Nick, country:Belgium, age:8
+        Average age =21

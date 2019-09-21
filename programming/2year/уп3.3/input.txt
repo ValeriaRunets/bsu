@@ -1,0 +1,13 @@
+[{
+"name":"Belarus",
+"population":"10"
+},
+{"name":"Russia",
+ "population":"145"},
+{"name":"France",
+ "population":"67"},
+{"name":"Italy",
+ "population":"61"},
+{"name":"Germany",
+ "population":"83"}
+],

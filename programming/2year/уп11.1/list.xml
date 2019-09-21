@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<list>
+    <human country="Germany"><name>Alex</name><age>25</age></human>
+    <human country="Portugal"><name>Steve</name> <age>30</age></human>
+    <human country="Belgium"><name>Nick</name><age>8</age></human>
+</list>

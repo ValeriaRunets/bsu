@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+    <Cinema>
+        <Places val="50"></Places>
+        <Name>October</Name>
+        <Films>Step</Films>
+        <Films>Heaven</Films>
+    </Cinema>
+    <Cinema>
+        <Places val="90"></Places>
+        <Name>Kiev</Name>
+        <Films>Step</Films>
+        <Films>Home</Films>
+    </Cinema>
+    <Cinema>
+        <Places val="70"></Places>
+        <Name>Belarus</Name>
+        <Films>Girl</Films>
+        <Films>Ice</Films>
+    </Cinema>
+</list>

@@ -1,0 +1,109 @@
+.menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: darkgrey;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+    content: "|";
+    color: black;
+    display: inline-block;
+    vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main .menu{
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+    cursor: pointer;
+}
+.menu-main .menu, .menu-main .menu:visited {color: black;}
+.menu-main .menu:before,
+.menu-main .menu:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #850024;
+    transition: .8s;
+}
+.menu-main .menu:hover:before, .menu-main .current:before {left: 0;}
+.menu-main .menu:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 550px) {
+    .menu-main {padding-top: 0;}
+    .menu-main li {display: block;}
+    .menu-main li:after {content: none;}
+    .menu-main .menu {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+.menu-main img{
+    height: 40px;
+    padding-left: 10px;
+}
+.table caption{
+    font-size: 50px;
+    font-family: Vivaldi;
+}
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    border-color: darkred;
+    width: 70%;
+    font-size: xx-large;
+}
+.icon{
+    text-decoration: none;
+}
+.news{
+    width: 100%;
+    float: left;
+}
+figure img{
+    width: 100%;
+}
+figure{
+    width: 27%;
+    display: inline;
+    float: left;
+}
+figcaption{
+    text-align: center;
+    display: block;
+}
+div{
+    border: 4px solid darkred;
+    margin-top: 20px;
+}
+h2{
+    font-family: Algerian;
+}
+.car{
+    width:43%;
+}
+.car img{
+    height: 500px;
+    width: 700px;
+}
+footer {
+    background-color: blanchedalmond;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
