@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.*;
+import java.nio.file.Files;
 import java.util.Scanner;
 
 public class MyFrame extends JFrame {
@@ -14,6 +15,8 @@ public class MyFrame extends JFrame {
     JButton but=new JButton("Code");
     String text="";
     String key="Java";
+    byte bytes[];
+    byte res[];
     MyFrame() {
         super();
         setVisible(true);
@@ -77,44 +80,45 @@ public class MyFrame extends JFrame {
         });
     }
     void save(){
-        JFileChooser fileopen = new JFileChooser("E:\\Java\\lab1");
+        JFileChooser fileopen = new JFileChooser("E:\\Java\\git\\programming\\3year\\lab1");
+        fileopen.setFileFilter(new FileNameExtensionFilter("txt", "txt"));
         int ret = fileopen.showSaveDialog(MyFrame.this);
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Text", "txt");
         fileopen.setFileFilter(filter);
         if (ret == JFileChooser.APPROVE_OPTION) {
             try {
                 File file = fileopen.getSelectedFile();
-                PrintWriter pw=new PrintWriter(file);
-                pw.write(text2.getText());
-                pw.close();
+                FileOutputStream out = new FileOutputStream(file);
+                out.write(text2.getText().getBytes("cp1251"));
             }catch (IOException ex){}
         }
         text=text2.getText();
     }
     void read(){
-        JFileChooser fileopen = new JFileChooser("E:\\Java\\lab1");
+        JFileChooser fileopen = new JFileChooser("E:\\Java\\git\\programming\\3year\\lab1");
+        fileopen.setFileFilter(new FileNameExtensionFilter("txt", "txt"));
         int ret = fileopen.showDialog(null, "Открыть файл");
         if (ret == JFileChooser.APPROVE_OPTION) {
             File file = fileopen.getSelectedFile();
             try {
-                Scanner sc = new Scanner(file);
-                text1.setText("");
-                while (sc.hasNextLine()) {
-                    text1.append(sc.nextLine() + "\n");
-                }
-                sc.close();
+                FileInputStream in=new FileInputStream(file);
+                bytes=in.readAllBytes();
+                text1.setText(new String(bytes, "cp1251"));
             } catch (IOException ex) {
             }
         }
     }
     String translate(){
-        byte[] txt = text1.getText().getBytes();
-        byte[] k = key.getBytes();
-        byte[] res = new byte[text1.getText().length()];
-        for (int i = 0; i < txt.length; i++) {
-            res[i] = (byte) (txt[i] ^ k[i % k.length]);
-        }
-        String ans=new String(res);
+        String ans = "";
+        try{
+            byte[] txt = text1.getText().getBytes("cp1251");
+            byte[] k = key.getBytes();
+            res = new byte[txt.length];
+            for (int i = 0; i < txt.length; i++) {
+                res[i] = (byte) (txt[i] ^ k[i % k.length]);
+            }
+                ans = new String(res, "cp1251");
+            }catch (IOException ex){}
         return ans;
     }
 
