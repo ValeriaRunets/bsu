@@ -6,8 +6,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.*;
-import java.nio.file.Files;
-import java.util.Scanner;
 
 public class MyFrame extends JFrame {
     JTextArea text1=new JTextArea();
@@ -31,7 +29,7 @@ public class MyFrame extends JFrame {
         setJMenuBar(bar);
         setLayout(new BorderLayout());
         Box box=Box.createHorizontalBox();
-        text1.setEnabled(false);
+        text1.setEditable(false);
         JScrollPane pane1=new JScrollPane(text1);
         JScrollPane pane2=new JScrollPane(text2);
         box.add(pane1, BorderLayout.WEST);
@@ -55,7 +53,7 @@ public class MyFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String ans=translate();
-                text2.setText(ans.substring(0, ans.length()-1));
+                text2.setText(ans);
             }
         });
         open.addActionListener(new ActionListener() {
@@ -83,8 +81,6 @@ public class MyFrame extends JFrame {
         JFileChooser fileopen = new JFileChooser("E:\\Java\\git\\programming\\3year\\lab1");
         fileopen.setFileFilter(new FileNameExtensionFilter("txt", "txt"));
         int ret = fileopen.showSaveDialog(MyFrame.this);
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Text", "txt");
-        fileopen.setFileFilter(filter);
         if (ret == JFileChooser.APPROVE_OPTION) {
             try {
                 File file = fileopen.getSelectedFile();
@@ -95,6 +91,7 @@ public class MyFrame extends JFrame {
         text=text2.getText();
     }
     void read(){
+        text2.setText("");
         JFileChooser fileopen = new JFileChooser("E:\\Java\\git\\programming\\3year\\lab1");
         fileopen.setFileFilter(new FileNameExtensionFilter("txt", "txt"));
         int ret = fileopen.showDialog(null, "Открыть файл");
